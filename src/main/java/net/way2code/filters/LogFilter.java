@@ -5,16 +5,17 @@ import jakarta.servlet.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 
 @Slf4j
-@Order(2)
+@Order(1)
 @Component
-public class AuthFilter implements Filter {
+public class LogFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // Checks to auth user
-        log.info("Print from AuthFilter");
+        log.info("Print from LogFilter");
         chain.doFilter(request, response);
     }
 }
