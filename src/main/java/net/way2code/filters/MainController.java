@@ -12,4 +12,9 @@ public class MainController {
     public void test() {
         log.info("Print from Controller");
     }
+
+    @GetMapping("/users")
+    public void users() {
+        log.info("Print from UsersController");
+    }
 }
