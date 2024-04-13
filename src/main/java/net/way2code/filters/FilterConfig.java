@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FilterConfig {
     @Bean
-    public FilterRegistrationBean<AuthFilter> loggingFilter(){
+    public FilterRegistrationBean<AuthFilter> authFilter(){
         FilterRegistrationBean<AuthFilter> registrationBean
                 = new FilterRegistrationBean<>();
 
